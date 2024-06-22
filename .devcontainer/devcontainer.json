@@ -1,0 +1,11 @@
+{
+  "name": "beauty_salon_app_admin_frontend",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "admin_frontend",
+  "workspaceFolder": "/var/www/beauty_salon_app_admin_frontend",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "octref.vetur"
+  ],
+  "forwardPorts": [8080]
+}

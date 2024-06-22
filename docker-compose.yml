@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  admin_frontend:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    image: beauty_salon_admin_frontend
+    container_name: beauty_salon_admin_frontend
+    working_dir: /var/www/beauty_salon_app_admin_frontend
+    volumes:
+      - .:/var/www/beauty_salon_app_admin_frontend
+      - ./.env:/var/www/beauty_salon_app_admin_frontend/.env
+    ports:
+      - 8080:8080
+    networks:
+      - beauty_salon
+
+networks:
+  beauty_salon:
+    external: true
